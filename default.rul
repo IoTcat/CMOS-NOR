@@ -1,6 +1,6 @@
 MICROWIND 2.0
 *
-* Rule File for CMOS 0.12µm
+* Rule File for CMOS 0.2Âµm (modified on 0.12Âµm version)
 * 
 * Date : 27 Apr 99 created by Etienne Sicard
 *        04 Jan 00 smaller dt
@@ -9,8 +9,9 @@ MICROWIND 2.0
 *        20 Apr 01 various lowK, 4 types of MOS
 *        10 Dec 01 Bsim4 model, gatek
 *        02 Jun 03 Bsim4 pmos model
+*        22 Apr 20 modified by iotcat for assignment purpose
 *
-NAME CMOS 0.12µm - 6 Metal
+NAME CMOS 0.2Âµm - 1 Metal
 *
 lambda = 0.2    (Lambda is set to half the gate size)
 metalLayers = 1  (Number of metal layers)
@@ -52,12 +53,8 @@ r306 = 4     (width of drain and source diff)
 r307 = 2     (extra gate poly)
 r310 = 16    (Minimum poly surface lambda2)
 *
-* Poly 2
-*
-r311 = 2     (poly2 width)
-r312 = 2     (poly2 spacing)
-*
 * Contact
+*
 r401 = 2     (contact width)
 r402 = 4     (contact spacing)
 r403 = 1     (metal border for contact)
@@ -68,64 +65,19 @@ r407 = 1     (poly2 border for contact)
 *
 *  metal
 r501 = 3    (metal width)
-r502 = 4    (metal spacing)
+r502 = 3    (metal spacing)
 r510 = 16    (minimum surface)
-*  via
-r601 = 2    (Via width)
-r602 = 4    (Spacing)
-r604 = 1    (border of metal)
-r605 = 1    (border of metal2)
-*  metal 2
-r701 = 3    (Metal 2 width)
-r702 = 4
-r710 = 16    (minimum surface)
-*  via 2
-r801 = 2    (Via width)
-r802 = 4    (Spacing)
-r804 = 1    (border of metal2)
-r805 = 1    (border of metal3)
-*  metal 3
-r901 = 3    (width)
-r902 = 4    (spacing)
-r910 = 16   (Minimum surface)
-*  via 3
-ra01 = 2    (Via width)
-ra02 = 4    (Spacing)
-ra04 = 1    (border of metal3)
-ra05 = 1    (border of metal4)
-*  metal 4
-rb01 = 3    (width)
-rb02 = 4    (spacing)
-rb10 = 16   (Minimum surface)
-*  via 4
-rc01 = 2    (Via width)
-rc02 = 4    (Spacing)
-rc04 = 1    (border of metal4)
-rc05 = 3    (border of metal5)
-*  metal 5
-rd01 = 8    (width)
-rd02 = 8    (spacing)
-rd10 = 64  (Minimum surface)
-*  via 5
-re01 = 5    (Via width)
-re02 = 5    (Spacing)
-re04 = 2    (border of metal5)
-re05 = 2    (border of metal6)
-*  metal 6
-rf01 = 8    (width)
-rf02 = 8   (spacing)
-rf10 = 144  (minimum surface)
 *
 * Pad rules
 *
-rp01 = 1330  (Pad width 80µm)
-rp02 = 1330  (Pad spacing 80µm)
+rp01 = 1330  (Pad width 80Âµm)
+rp02 = 1330  (Pad spacing 80Âµm)
 rp03 = 40    (Border of Vias)
 rp04 = 40    (Border of metals)
 rp05 = 200   (to unrelated active areas)
 *
 * Thickness of conductors for process aspect
-* All in µm
+* All in Âµm
 *
 * P++ epitaxial
 thepi = 1.0
@@ -196,8 +148,8 @@ rev5 = 1
 *
 * Parasitic capacitances
 *
-cpoOxyde= 15000 (Surface capacitance Poly/Thin oxyde aF/µm2)
-cedram = 150000 (embedded Dram surface capacitance aF/µm2)
+cpoOxyde= 15000 (Surface capacitance Poly/Thin oxyde aF/Âµm2)
+cedram = 150000 (embedded Dram surface capacitance aF/Âµm2)
 cpobody = 400  (No lineic capa)
 cp2body = 400
 cmebody = 200  (Strong value due to upper and lower capa)
@@ -227,7 +179,7 @@ cm6m5 = 100
 *
 * Lateral Crosstalk
 *
-cmextk = 30      (Lineic capacitance for crosstalk coupling in aF/µm)
+cmextk = 30      (Lineic capacitance for crosstalk coupling in aF/Âµm)
 cm2xtk = 30      (C is computed using Cx=cmextk*l/spacing)
 cm3xtk = 30
 cm4xtk = 30
@@ -240,7 +192,7 @@ cdnpwell = 350  (n+/psub)
 cdpnwell = 300  (p+/nwell)
 cnwell = 250    (nwell/psub)
 cpwell = 100    (pwell/nsub)
-cldn = 100      (Lineic capacitance N+/P- aF/µm)
+cldn = 100      (Lineic capacitance N+/P- aF/Âµm)
 cldp = 100      (Idem for P+/N-)
 *
 * MOS definition
@@ -403,5 +355,5 @@ hvdd = 2.5
 temperature = 27
 riseTime = 0.025
 *
-* End CMOS 0.12µm
+* End CMOS 0.2Âµm
 *
